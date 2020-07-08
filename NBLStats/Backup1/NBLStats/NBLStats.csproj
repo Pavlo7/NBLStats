@@ -1,0 +1,1012 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9156C66-1B2D-4FD4-B644-8C1F67855736}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NBLStats</RootNamespace>
+    <AssemblyName>NBLStats</AssemblyName>
+    <ApplicationIcon>Main.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DllReportNBL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DllReportNBL\DllReportNBL\bin\Debug\DllReportNBL.dll</HintPath>
+    </Reference>
+    <Reference Include="DllSmart, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DllSmart\DllSmart\bin\Debug\DllSmart.dll</HintPath>
+    </Reference>
+    <Reference Include="FanGame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FanGame\FanGame\bin\Debug\FanGame.dll</HintPath>
+    </Reference>
+    <Reference Include="LibData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LibData\LibData\bin\Debug\LibData.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Awards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Awards.Designer.cs">
+      <DependentUpon>Awards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AwardsResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AwardsResult.Designer.cs">
+      <DependentUpon>AwardsResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarGames.Designer.cs">
+      <DependentUpon>CalendarGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeSeason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeSeason.Designer.cs">
+      <DependentUpon>ChangeSeason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Citys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citys.Designer.cs">
+      <DependentUpon>Citys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach.Designer.cs">
+      <DependentUpon>Coach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect.Designer.cs">
+      <DependentUpon>Connect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertToMySQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConvertToMySQL.Designer.cs">
+      <DependentUpon>ConvertToMySQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Countrys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Countrys.Designer.cs">
+      <DependentUpon>Countrys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayStats.Designer.cs">
+      <DependentUpon>DisplayStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division.Designer.cs">
+      <DependentUpon>Division.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgAwards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgAwards.Designer.cs">
+      <DependentUpon>DlgAwards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgAwardsResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgAwardsResult.Designer.cs">
+      <DependentUpon>DlgAwardsResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgBookOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgBookOut.Designer.cs">
+      <DependentUpon>DlgBookOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgCitys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgCitys.Designer.cs">
+      <DependentUpon>DlgCitys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgCoach.Designer.cs">
+      <DependentUpon>DlgCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgCompositionGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgCompositionGroup.Designer.cs">
+      <DependentUpon>DlgCompositionGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgCountrys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgCountrys.Designer.cs">
+      <DependentUpon>DlgCountrys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgDiscvalification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgDiscvalification.Designer.cs">
+      <DependentUpon>DlgDiscvalification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgDivision.Designer.cs">
+      <DependentUpon>DlgDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgDraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgDraft.Designer.cs">
+      <DependentUpon>DlgDraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgEntryId.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEntryId.Designer.cs">
+      <DependentUpon>DlgEntryId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgFinalResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgFinalResult.Designer.cs">
+      <DependentUpon>DlgFinalResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgGameDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgGameDays.Designer.cs">
+      <DependentUpon>DlgGameDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgGameExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgGameExt.Designer.cs">
+      <DependentUpon>DlgGameExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgGroup.Designer.cs">
+      <DependentUpon>DlgGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgImportTimePM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgImportTimePM.Designer.cs">
+      <DependentUpon>DlgImportTimePM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgParticipant.Designer.cs">
+      <DependentUpon>DlgParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPlace.Designer.cs">
+      <DependentUpon>DlgPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPlayers.Designer.cs">
+      <DependentUpon>DlgPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgPostmetn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPostmetn.Designer.cs">
+      <DependentUpon>DlgPostmetn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgReferee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgReferee.Designer.cs">
+      <DependentUpon>DlgReferee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgRegions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgRegions.Designer.cs">
+      <DependentUpon>DlgRegions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgScheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgScheme.Designer.cs">
+      <DependentUpon>DlgScheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgStats.Designer.cs">
+      <DependentUpon>DlgStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgTeam.Designer.cs">
+      <DependentUpon>DlgTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgEntryTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEntryTeam.Designer.cs">
+      <DependentUpon>DlgEntryTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgEntryPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEntryPlayer.Designer.cs">
+      <DependentUpon>DlgEntryPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgTechnicalFouls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgTechnicalFouls.Designer.cs">
+      <DependentUpon>DlgTechnicalFouls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgTransferNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgTransferNews.Designer.cs">
+      <DependentUpon>DlgTransferNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgVoteASG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgVoteASG.Designer.cs">
+      <DependentUpon>DlgVoteASG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgVotePCA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgVotePCA.Designer.cs">
+      <DependentUpon>DlgVotePCA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Draft.Designer.cs">
+      <DependentUpon>Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryPlayer.Designer.cs">
+      <DependentUpon>EntryPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FanGameReportItog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FanGameReportItog.Designer.cs">
+      <DependentUpon>FanGameReportItog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileInfoSgm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileInfoSgm.Designer.cs">
+      <DependentUpon>FileInfoSgm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameDays.Designer.cs">
+      <DependentUpon>GameDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryEntryPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryEntryPlayers.Designer.cs">
+      <DependentUpon>HistoryEntryPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportStats.Designer.cs">
+      <DependentUpon>ImportStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListToTablo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListToTablo.Designer.cs">
+      <DependentUpon>ListToTablo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Postment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Postment.Designer.cs">
+      <DependentUpon>Postment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RankingPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankingPlayers.Designer.cs">
+      <DependentUpon>RankingPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RankingTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankingTeam.Designer.cs">
+      <DependentUpon>RankingTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAssessRefereeWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportAssessRefereeWnd.Designer.cs">
+      <DependentUpon>ReportAssessRefereeWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportRatingsTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportRatingsTeam.Designer.cs">
+      <DependentUpon>ReportRatingsTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecordsPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordsPerson.Designer.cs">
+      <DependentUpon>RecordsPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportlDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportlDay.Designer.cs">
+      <DependentUpon>ReportlDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportExcelProtocols.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportExcelProtocols.Designer.cs">
+      <DependentUpon>ReportExcelProtocols.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalResult.Designer.cs">
+      <DependentUpon>FinalResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group.Designer.cs">
+      <DependentUpon>Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryPlayer.Designer.cs">
+      <DependentUpon>HistoryPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mode.Designer.cs">
+      <DependentUpon>Mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParamApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParamApp.Designer.cs">
+      <DependentUpon>ParamApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParamSeason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParamSeason.Designer.cs">
+      <DependentUpon>ParamSeason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Participant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Participant.Designer.cs">
+      <DependentUpon>Participant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Place.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Place.Designer.cs">
+      <DependentUpon>Place.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Players.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Players.Designer.cs">
+      <DependentUpon>Players.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Awards.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Awards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AwardsResult.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AwardsResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarGames.resx">
+      <DependentUpon>CalendarGames.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeSeason.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChangeSeason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Citys.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Citys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach.resx">
+      <DependentUpon>Coach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Connect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConvertToMySQL.resx">
+      <DependentUpon>ConvertToMySQL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Countrys.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Countrys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayStats.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DisplayStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Division.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgAwards.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgAwards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgAwardsResult.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgAwardsResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgBookOut.resx">
+      <DependentUpon>DlgBookOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgCitys.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgCitys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgCoach.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgCompositionGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgCompositionGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgCountrys.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgCountrys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDiscvalification.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgDiscvalification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDivision.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDraft.resx">
+      <DependentUpon>DlgDraft.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEntryId.resx">
+      <DependentUpon>DlgEntryId.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgFinalResult.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgFinalResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgGameDays.resx">
+      <DependentUpon>DlgGameDays.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgGameExt.resx">
+      <DependentUpon>DlgGameExt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgImportTimePM.resx">
+      <DependentUpon>DlgImportTimePM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgParticipant.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPlace.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPlayers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPostmetn.resx">
+      <DependentUpon>DlgPostmetn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgReferee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgReferee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgRegions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgRegions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgScheme.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgScheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgStats.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgTeam.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEntryTeam.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgEntryTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEntryPlayer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgEntryPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgTechnicalFouls.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgTechnicalFouls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgTransferNews.resx">
+      <DependentUpon>DlgTransferNews.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgVoteASG.resx">
+      <DependentUpon>DlgVoteASG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgVotePCA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgVotePCA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draft.resx">
+      <DependentUpon>Draft.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryPlayer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EntryPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FanGameReportItog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FanGameReportItog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileInfoSgm.resx">
+      <DependentUpon>FileInfoSgm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalResult.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FinalResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameDays.resx">
+      <DependentUpon>GameDays.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryEntryPlayers.resx">
+      <DependentUpon>HistoryEntryPlayers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryPlayer.resx">
+      <DependentUpon>HistoryPlayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportStats.resx">
+      <DependentUpon>ImportStats.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListToTablo.resx">
+      <DependentUpon>ListToTablo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParamApp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ParamApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParamSeason.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ParamSeason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Participant.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Participant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Place.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Place.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Players.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Players.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Postment.resx">
+      <DependentUpon>Postment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RankingPlayers.resx">
+      <DependentUpon>RankingPlayers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RankingTeam.resx">
+      <DependentUpon>RankingTeam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RatingPlayerInNBL.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RatingPlayerInNBL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAssessRefereeWnd.resx">
+      <DependentUpon>ReportAssessRefereeWnd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportRatingsTeam.resx">
+      <DependentUpon>ReportRatingsTeam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordsPerson.resx">
+      <DependentUpon>RecordsPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Referee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Regions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAboutGame.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportAboutGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBestPlayer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportBestPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportlDay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportlDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportExcelProtocols.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportExcelProtocols.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPart.resx">
+      <DependentUpon>ReportPart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreViewWeb.resx">
+      <DependentUpon>ReportPreViewWeb.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportReferee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportReferee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportStatsPlaer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportStatsPlaer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportStatsTeamAndPlayers.resx">
+      <DependentUpon>ReportStatsTeamAndPlayers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportTeamStanding.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportTeamStanding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheme.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Scheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stats.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsCoach.resx">
+      <DependentUpon>StatsCoach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsReferee.resx">
+      <DependentUpon>StatsReferee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbol5.resx">
+      <DependentUpon>Symbol5.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableDiscvalification.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TableDiscvalification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableTehnicalFouls.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TableTehnicalFouls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Team.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Team.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryTeam.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EntryTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoteASG.resx">
+      <DependentUpon>VoteASG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotePCA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VotePCA.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RatingPlayerInNBL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RatingPlayerInNBL.Designer.cs">
+      <DependentUpon>RatingPlayerInNBL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referee.Designer.cs">
+      <DependentUpon>Referee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Regions.Designer.cs">
+      <DependentUpon>Regions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAboutGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportAboutGame.Designer.cs">
+      <DependentUpon>ReportAboutGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportBestPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportBestPlayer.Designer.cs">
+      <DependentUpon>ReportBestPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPart.Designer.cs">
+      <DependentUpon>ReportPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreViewWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreViewWeb.Designer.cs">
+      <DependentUpon>ReportPreViewWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportReferee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportReferee.Designer.cs">
+      <DependentUpon>ReportReferee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportStatsPlaer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportStatsPlaer.Designer.cs">
+      <DependentUpon>ReportStatsPlaer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportStatsTeamAndPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportStatsTeamAndPlayers.Designer.cs">
+      <DependentUpon>ReportStatsTeamAndPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportTeamStanding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportTeamStanding.Designer.cs">
+      <DependentUpon>ReportTeamStanding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheme.Designer.cs">
+      <DependentUpon>Scheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stats.Designer.cs">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatsCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatsCoach.Designer.cs">
+      <DependentUpon>StatsCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatsReferee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatsReferee.Designer.cs">
+      <DependentUpon>StatsReferee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Symbol5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Symbol5.Designer.cs">
+      <DependentUpon>Symbol5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableDiscvalification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableDiscvalification.Designer.cs">
+      <DependentUpon>TableDiscvalification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableTehnicalFouls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableTehnicalFouls.Designer.cs">
+      <DependentUpon>TableTehnicalFouls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Team.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Team.Designer.cs">
+      <DependentUpon>Team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntryTeam.Designer.cs">
+      <DependentUpon>EntryTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteASG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoteASG.Designer.cs">
+      <DependentUpon>VoteASG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotePCA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotePCA.Designer.cs">
+      <DependentUpon>VotePCA.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Main.ico" />
+    <None Include="Resources\delete.png" />
+    <Content Include="Resources\globered.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\main.png" />
+    <None Include="Resources\or8h08be9bc4ub8rsyto19macfoz4ezj_2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

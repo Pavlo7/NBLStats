@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <ConnectDB>
+    <add key="Server" value="MICROSOFT-19EF2D" />
+    <add key="DB" value="NBLDB" />
+    <add key="User" value="sa" />
+    <add key="Pwd" value="123" />
+  </ConnectDB>
+  <PathData>
+    <add key="PathReport" value="D:\Баскетбол\Отчёты" />
+    <add key="PathPattern" value="D:\Баскетбол\Формы" />
+    <add key="PathFoto" value="D:\Баскетболл\Фото" />
+    <add key="PathFanGameImport" value="D:\Баскетбол\Игра для болельщиков\Импорт" />
+    <add key="PathFanGameArch" value="D:\Баскетбол\Игра для болельщиков\Архив" />
+    <add key="PathSgmFile" value="D:\Баскетбол\Импорт" />
+    <add key="PathSgmFileArch" value="D:\Баскетбол\SgmArch" />
+  </PathData>
+  <Mode>
+    <add key="PwdMode" value="21745" />
+  </Mode>
+</configuration>
